@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?> 
+<manifest xmlns:android='http://schemas.android.com/apk/res/android' 
+      android:versionName='1.0' 
+      package='org.rubyandroid.apibrowser' 
+      android:versionCode='1'
+      android:installLocation="preferExternal">
+    <application android:label='@string/app_name' android:icon='@drawable/icon'>
+        <activity android:name='AndroidAPIBrowser' android:label='@string/app_name'  android:configChanges="orientation">
+            <intent-filter>
+                <action android:name='android.intent.action.MAIN'/>
+                <category android:name='android.intent.category.LAUNCHER'/>
+            </intent-filter>
+        </activity>
+        <activity android:name='org.ruboto.RubotoActivity'  android:configChanges="orientation" />
+        <activity android:name='org.ruboto.RubotoDialog' android:theme='@android:style/Theme.Dialog'/>
+        <activity android:name="org.ruboto.RubotoPreferenceActivity" />
+    </application>
+
+    <uses-sdk android:minSdkVersion='3' android:targetSdkVersion='10'/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
